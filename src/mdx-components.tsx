@@ -1,8 +1,8 @@
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 import { Banner } from "fumadocs-ui/components/banner";
 import { Callout } from "fumadocs-ui/components/callout";
-import * as FilesComponents from "fumadocs-ui/components/files";
 import * as TabsComponents from "fumadocs-ui/components/tabs";
+import * as FilesComponents from "fumadocs-ui/components/tabs";
 import { TypeTable } from "fumadocs-ui/components/type-table";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import * as icons from "lucide-react";
@@ -33,8 +33,6 @@ export function getMDXComponents(components?: MDXComponents) {
 }
 
 declare module "mdx/types.js" {
-  // Augment the MDX types to make it understand React.
-  // biome-ignore lint/style/noNamespace: required for MDX
   namespace JSX {
     type Element = React.JSX.Element;
     type ElementClass = React.JSX.ElementClass;
