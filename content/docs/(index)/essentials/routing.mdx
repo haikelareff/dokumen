@@ -9,29 +9,29 @@ icon: 'Map'
 Fumadocs uses a file-system based routing system to organize your documents. This allows you to create a clear and consistent structure for your documentation, making it easier for users to navigate and find the information they need.
 
 <Files>
-    <Folder name="content/docs (content directory)" defaultOpen>
-        <Folder name="(index)" defaultOpen>
+    <Folder name="content/docs (content directory)" defaultopen="true">
+        <Folder name="(index)" defaultopen="true">
 
             <File name="index.mdx" />
 
             <File name="quickstart.mdx" />
         </Folder>
-        <Folder name="api-reference" defaultOpen>
+        <Folder name="api-reference" defaultopen="true">
 
             <File name="index.mdx" />
 
-            <Folder name="(generated)" defaultOpen>
-                <Folder name="events" defaultOpen>
+            <Folder name="(generated)" defaultopen="true">
+                <Folder name="events" defaultopen="true">
                     <File name="getSpecialEvent.mdx" />
                     <File name="createSpecialEvent.mdx" />
                 </Folder>
-                <Folder name="operations" defaultOpen>
+                <Folder name="operations" defaultopen="true">
                     <File name="getMuseumHours.mdx" />
                 </Folder>
             </Folder>
 
         </Folder>
-        <Folder name="changelog" defaultOpen>
+        <Folder name="changelog" defaultopen="true">
 
             <File name="index.mdx" />
 
@@ -93,7 +93,7 @@ Customize folders by creating a `meta.json` file in the folder.
   "title": "Display Name",
   "icon": "MyIcon",
   "pages": ["index", "quickstart"],
-  "defaultOpen": true
+  "defaultopen": true
 }
 ```
 
@@ -102,7 +102,7 @@ Customize folders by creating a `meta.json` file in the folder.
 | `title`       | Display name                          |
 | `icon`        | The name of icon, see [Icons](#icons) |
 | `pages`       | Folder items (see below)              |
-| `defaultOpen` | Open the folder by default            |
+| `defaultopen` | Open the folder by default            |
 
 ### Pages
 
@@ -187,7 +187,7 @@ Marks the folder as a root folder, only items in the opened root folder will be 
 For example, when you are opening a root folder `framework`, the other folders (e.g. `headless`) are not shown on the sidebar and other navigation elements.
 
 <Files>
-  <Folder name="framework" defaultOpen>
+  <Folder name="framework" defaultopen>
     <File name="index.mdx" />
 
     <File name="current-page.mdx" className="!text-fd-primary !bg-fd-primary/10" />
@@ -196,7 +196,7 @@ For example, when you are opening a root folder `framework`, the other folders (
 
   </Folder>
 
-  <Folder name="headless (hidden)" className="opacity-50" disabled defaultOpen>
+  <Folder name="headless (hidden)" className="opacity-50" disabled defaultopen>
     <File name="my-page.mdx" />
   </Folder>
 </Files>
