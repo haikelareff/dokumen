@@ -44,7 +44,7 @@ coverage
 next-env.d.ts
 
 # generated content
-.source
+.source/
 
 # Misc
 .DS_Store
@@ -52,7 +52,7 @@ next-env.d.ts
 apps/api/server
 
 # IDE /agent
-.zed
+.zed/
 
 core
 
