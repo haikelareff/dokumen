@@ -9,27 +9,36 @@ export interface GenerateProps {
   tag?: string;
 }
 
-const font = readFile("./src/app/og/[...slug]/fonts/Inter-Regular.ttf").then(
+const font = readFile("./src/app/og/[...slug]/fonts/Geist-Regular.ttf").then(
   (data) => ({
-    name: "Inter",
+    name: "Geist",
     data,
     weight: 400,
   })
 );
 const fontSemiBold = readFile(
-  "./src/app/og/[...slug]/fonts/Inter-SemiBold.ttf"
+  "./src/app/og/[...slug]/fonts/Geist-SemiBold.ttf"
 ).then((data) => ({
-  name: "Inter",
+  name: "Geist",
   data,
   weight: 500,
 }));
-const fontBold = readFile("./src/app/og/[...slug]/fonts/Inter-Bold.ttf").then(
+const fontBold = readFile("./src/app/og/[...slug]/fonts/Geist-Bold.ttf").then(
   (data) => ({
-    name: "Inter",
+    name: "Geist",
     data,
     weight: 700,
   })
 );
+
+//const fontBlack = readFile("./src/app/og/[...slug]/fonts/Geist-Black.ttf").then(
+// (data) => ({
+// name: "Geist",
+//  data,
+// weight: 900,
+// })
+//);
+
 const logo = readFile("./public/logo.svg").then((data) => ({
   src: "logo.svg",
   data,

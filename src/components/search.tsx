@@ -132,7 +132,7 @@ export default function CustomSearchDialog(props: SharedProps) {
                 return (
                   <button
                     className={cn(
-                      "rounded-lg px-2 py-1.5 text-start",
+                      "rounded-none px-2 py-1.5 text-start",
                       isSelected
                         ? "bg-fd-primary/10 text-fd-primary"
                         : "hover:bg-fd-accent hover:text-fd-accent-foreground"

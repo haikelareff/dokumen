@@ -13,7 +13,7 @@ export default function NotFound() {
             className="text-primary underline underline-offset-4 hover:text-primary/80"
             href="/"
           >
-            Go back home
+            Go home youre drunk
           </Link>
         </h2>
       </div>

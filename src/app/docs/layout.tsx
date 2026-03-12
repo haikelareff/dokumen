@@ -2,7 +2,7 @@ import { DocsLayout } from "fumadocs-ui/layouts/notebook";
 import { baseOptions, linkItems, logo } from "@/lib/layout.shared";
 import { source } from "@/lib/source";
 import "katex/dist/katex.min.css";
-import type { CSSProperties, ReactNode } from "react";
+import type { CSSProperties } from "react";
 import {
   AISearch,
   AISearchPanel,
@@ -12,7 +12,7 @@ import {
 const LEADING_DASHES = /^-+/;
 const TRAILING_DASHES = /-+$/;
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function LayoutLayout({ children }: LayoutProps<"/">) {
   const base = baseOptions();
 
   return (
@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         title: (
           <>
             {logo}
-            <span className="font-medium max-md:hidden">Starter Kit</span>
+            <span className="font-medium max-md:hidden">Dokumen Malaya</span>
           </>
         ),
       }}
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               ...option,
               icon: (
                 <div
-                  className="size-full rounded-lg text-(--tab-color) max-md:border max-md:bg-(--tab-color)/10 max-md:p-1.5 [&_svg]:size-full"
+                  className="size-full rounded-br-none text-(--tab-color) max-md:border max-md:bg-(--tab-color)/10 max-md:p-1.5 [&_svg]:size-full"
                   style={
                     {
                       "--tab-color": color,

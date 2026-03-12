@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import "katex/dist/katex.css";
 import { NextProvider } from "fumadocs-core/framework/next";
 import { TreeContextProvider } from "fumadocs-ui/contexts/tree";
+import type { Metadata } from "next";
 import { source } from "@/lib/source";
 import { url } from "@/lib/url";
 import { cn } from "@/lib/utils";
@@ -22,9 +23,9 @@ const mono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = createMetadata({
+export const metadata: Metadata = createMetadata({
   title: {
-    template: "%s | Starter Kit",
+    template: "%s | Docs Starter Kit",
     default: "Starter Kit",
   },
   description: "The Next.js framework for building documentation sites",

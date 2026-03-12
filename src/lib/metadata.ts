@@ -9,14 +9,14 @@ export function createMetadata(override: Metadata): Metadata {
     openGraph: {
       title: override.title ?? undefined,
       description: override.description ?? undefined,
-      url: "https://fumadocsstarter.vercel.app",
+      url: "https://dokumen.vercel.app",
       images: "/banner.png",
       siteName: title,
       ...override.openGraph,
     },
     twitter: {
       card: "summary_large_image",
-      creator: "@AnirudhWith",
+      creator: "@haikel_areff",
       title: override.title ?? undefined,
       description: override.description ?? undefined,
       images: "/banner.png",
@@ -35,5 +35,5 @@ export function getPageImage(page: Page) {
 
 export const baseUrl =
   env.NODE_ENV === "development" || !env.NEXT_PUBLIC_BASE_URL
-    ? new URL("http://localhost:3000")
+    ? new URL("http://localhost:4000")
     : new URL(env.NEXT_PUBLIC_BASE_URL);

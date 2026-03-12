@@ -48,7 +48,7 @@ export function ThemeToggle({
             }
             const isActive = value === key;
             return (
-              <div className="relative size-6.5 rounded-full p-1.5" key={key}>
+              <div className="relative size-6.5 rounded-none p-1.5" key={key}>
                 {isActive && <Pill />}
                 <Icon
                   className={cn(
